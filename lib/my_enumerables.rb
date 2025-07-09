@@ -8,4 +8,10 @@ end
 # to this method
 class Array
   # Define my_each here
+  def my_each
+    self.size.times do |i|
+      yield self[i]
+    end
+    self
+  end
 end
