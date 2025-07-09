@@ -53,6 +53,15 @@ module Enumerable
     count
   end
 
+  def my_map
+    output = []
+    
+    self.my_each do |element|
+      output << yield(element)
+    end
+    output
+  end
+
 end
 
 # You will first have to define my_each
