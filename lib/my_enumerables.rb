@@ -62,6 +62,16 @@ module Enumerable
     output
   end
 
+  def my_inject(initial_value)
+    return initial_value if self.size.zero?
+
+    output = initial_value
+    self.my_each do |element|
+      output = yield(output, element)
+    end
+    output
+  end
+
 end
 
 # You will first have to define my_each
