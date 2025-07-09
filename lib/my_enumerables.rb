@@ -8,6 +8,13 @@ module Enumerable
     end
     output
   end
+
+  def my_each_with_index
+    self.size.times do |i|
+      yield self[i], i
+    end
+    self
+  end
 end
 
 # You will first have to define my_each
